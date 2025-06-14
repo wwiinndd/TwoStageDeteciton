@@ -34,7 +34,6 @@ def Vgg(setlist, dropout=0.5):
         VggBase(in_c=256, out_c=512, num=setlist[3]),
         nn.MaxPool2d(kernel_size=2, stride=2),
         VggBase(in_c=512, out_c=512, num=setlist[4]),
-        nn.MaxPool2d(kernel_size=2, stride=2),
     )
 
     classfier = nn.Sequential(
